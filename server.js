@@ -482,7 +482,7 @@ app.use("/purchase",function (req,res) {
               amount: total,
               source: req.body.stripeTokenId,
               currency: 'thb'
-              // currency: 'usd'
+              // currency: 'usd 55'
           }).then(function(){
               console.log('Charge Successful')
               res.json({message: 'successfully purchased items'})
