@@ -1,0 +1,321 @@
+<html lang="en-US">
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+<link href="css/css1.css" rel="stylesheet">
+<LINK REL="SHORTCUT ICON" HREF="pic/overlogo.ico" >
+	<title>WANWIOLA</title>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+		<style type="text/css">
+
+
+.bt {
+  background-color: red;
+  border: none;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+
+body {font-family: 'Kanit', sans-serif;
+}
+
+p {
+	font-size: 16px
+}
+
+
+.cart-page .cart-into  {
+  @extend .group;
+}
+.total-price .total-price table{
+  content: '฿';
+}
+
+/*-- cart item --*/
+.cart-page{
+margin: 80px auto;
+
+}
+
+table{
+  width: 100%;
+  border-collapes: collapse ;
+}
+.cart-into{
+display:flex;
+flex-wrap: wrap;
+}
+.cart-into p{
+  display:none;
+}
+th{
+text-align: left;
+padding: 5px;
+color:black;
+background:#ffe368;
+font-weight: normal ;
+}
+
+td{
+  padding:10px 5px ;
+}
+
+td input{
+  width: 50px;
+  height:30px;
+  padding: 5px;
+
+}
+td a{
+  color:#fdd900;
+  font-size:12px;
+}
+
+td img{
+width:170px;
+margin-right:10px;
+
+}
+
+.total-price{
+  display:flex;
+  justify-content:flex-end;
+}
+.total-price table{
+  border-top:3px solid #ffe368;
+  width:100%;
+  max-width: 400px;
+}
+td:last-child{
+  text-align: right;
+}
+th:last-child{
+  text-align: right;
+}
+	</style>
+	
+</head>	
+
+<body>
+	
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #f5efed;">
+		  <a class="navbar-brand" href="/home"><img src="pic/logowan.png" width="150px"></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="/home"  style="color: #000000;font-family: 'Kanit', sans-serif">หน้าหลัก <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/about"  style="color: #000000;font-family: 'Kanit', sans-serif">about us</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="color: #000000;font-family: 'Kanit', sans-serif">product</a>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="/product1" style="background-color:#f5efed ;">wiola - detox</a>
+				  <a class="dropdown-item" href="/product2" style="background-color:#f5efed ;">wiola - collagen</a>
+			
+				</div>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="color: #000000;font-family: 'Kanit', sans-serif">shop media</a>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="https://www.instagram.com/wanwiola/?igshid=1xyogx2mzbwhz" style="background-color:#f5efed ;">ig</a>
+				  <a class="dropdown-item" href="https://shopee.co.th/wanwiola.official?smtt=0.0.9" style="background-color: #f5efed ;" >shopee</a>
+				</div>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link " href="/order"  style="color: #000000;font-family: 'Kanit', sans-serif">order</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link " href="/contact"  style="color: #000000;font-family: 'Kanit', sans-serif">contact us</a>
+			  </li>
+			</ul>
+			<form class="form-inline mt-2 mt-md-0">
+				<%if (isLoggedIn==false) { %>
+					<a href="/register">  <button type="button" class="w3-button w3-black w3-round-xlarge" style="background: #fdd900;color: dimgray;font-family: 'Kanit', sans-serif ; border-color: #fdd900;">สมัครสมาชิก </a> </button> &nbsp; &nbsp;
+					<a href="/login"> <button type="button" class="w3-button  w3-round-xlarge" style="background: #fdd900;color: dimgray;font-family: 'Kanit', sans-serif ; border-color: #fdd900;">เข้าสู่ระบบ</a></button>
+					<% } %>
+					<%if (isLoggedIn) { %>
+					<a href="/profile">  <button type="button" class="w3-button w3-black w3-round-xlarge" style="background: #fdd900;color: dimgray;font-family: 'Kanit', sans-serif ; border-color: #fdd900;"><%= username %> </a> </button> &nbsp; &nbsp;
+					<% } %>
+			</form>
+		  </div>
+		</nav>
+      </header>
+<br><br>
+<br><br><br>
+<center><img src="pic/logowan.png" width="250px"></center>
+
+<br>
+
+<div class="container">
+
+  <table>
+    <tr>
+      <th>สินค้า</th>
+<th>จำนวน</th>
+<th>ยอดรวม</th>
+	</tr>
+	<% for(var i=0; i < posts.length; i++) { %>
+<tr>
+  <td>
+  <div class="cart-info">
+    <img src="pic/<%= posts[i].imgurl %>" width="170px">
+    <div>
+      <p><%= posts[i].Product_name %></p>
+      <small>ราคา: ฿750.00</small>
+      <a href="#" style="color: red;">  remove</a>
+    </div>
+  </div>
+</td>
+      <td><input type="number" value="<%= posts[i].quantity %>"></td>
+      <td>฿750.00</td>
+	</tr>
+	<% } %>
+  </table>
+
+<div class="total-price">
+  <table>
+    <tr>
+      <td>ยอดรวม</td>
+      <td>฿790</td>
+    </tr>
+    <tr>
+      <td>ค่าส่ง</td>
+      <td>฿50.00</td>
+    </tr>
+    <tr>
+      <td>รวมทั้งหมด</td>
+      <td>฿840.00</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href=""> <right> <button type="button" class="w3-button w3-black w3-round-xlarge" >ชำระเงิน </a> </button></td>
+    </tr>
+  </table>
+
+</div>
+
+<center>
+  <a href="/order"> <button type="button" class="w3-button  w3-round-xlarge" style="background: #fdd900;color: dimgray; ; border-color: #fdd900"> ย้อนกลับ </a> </button>
+  <a href="#"> <button type="button" class="w3-button  w3-round-xlarge" style="background: #fdd900;color: dimgray; ; border-color: #fdd900">ชำระเงิน</a> </button>
+</center>
+</div>
+<br>
+<br>
+
+<!-- Footer -->
+
+
+
+<footer  style="background:	#fcf4f3;">
+	<br>
+	<div class="container text-center text-md-left mt-5">
+
+		<!-- Grid row -->
+		<div class="row mt-3">
+	
+		  <!-- Grid column -->
+		  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+	
+			<!-- Content -->
+			<h6 class="text-uppercase font-weight-bold">WANWIOLA</h6>
+			<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+			<p style="color: #d69588;"> &copy; บริษัท ผลิตภัณฑ์อาหาร เสริมแบรนด์ วันวิโอลา จำกัด</p>
+	
+		  </div>
+		 
+	
+		  <!-- Grid column -->
+		  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+	
+			<!-- Links -->
+			<h6 class="text-uppercase font-weight-bold">Products</h6>
+			<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+			<p>
+			  <a href="#!">WIOLA - Detox</a>
+			</p>
+		
+	
+		  </div>
+		
+	
+		  <!-- Grid column -->
+		  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+	
+			<!-- Links -->
+			<h6 class="text-uppercase font-weight-bold">Useful links</h6>
+			<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+			<p>
+			  <a href="/about">About us</a>
+			</p>
+			<p>
+			  <a href="#!">Shop Media</a>
+			</p>
+			<p>
+			  <a href="/review">รีวิว</a>
+			</p>
+			
+	
+		  </div>
+
+	
+		  <!-- Grid column -->
+		  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+	
+			<!-- Links -->
+			<h6 class="text-uppercase font-weight-bold">Contact</h6>
+			<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+			<p>
+			  <i class="fas fa-home mr-3"></i> bangkok, 2020, TH</p>
+			<p>
+			  <i class="fas fa-envelope mr-3"></i> wanwiola.official@gmail.com</p>
+			<p>
+			  <i class="fas fa-phone mr-3"></i> + 08 639 233 94</p>
+			<p>
+			  <i class="fas fa-print mr-3"></i> + 08 193 252 59</p>
+	
+		  </div>
+		  <!-- Grid column -->
+	
+		</div>
+		<!-- Grid row -->
+	
+	  </div>
+    <br>
+    <center>
+	 <a href="https://www.instagram.com/wanwiola/?igshid=1xyogx2mzbwhz"><img src="https://www.flaticon.com/svg/static/icons/svg/2111/2111463.svg" width="22px"> 
+	<img src="https://www.flaticon.com/svg/static/icons/svg/145/145802.svg" width="22px">
+	<img src="https://www.flaticon.com/svg/static/icons/svg/733/733579.svg" width="22px">
+	<img src="https://www.flaticon.com/svg/static/icons/svg/1384/1384060.svg" width="22px"><br><br></a>
+	<p>© 2020 · The Wanwiola Company </p>
+	<br><br><br></center>
+  </footer>
+ 
+     
+<script>
+
+</script>
+</body>
+</html>

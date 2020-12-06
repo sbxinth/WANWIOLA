@@ -1,0 +1,377 @@
+<html lang="en-US">
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+<link href="css/css1.css" rel="stylesheet">
+<LINK REL="SHORTCUT ICON" HREF="pic/overlogo.ico" >
+	<title>WANWIOLA</title>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+		<style type="text/css">
+
+
+.bt {
+  background-color: #ffe368;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+
+body {font-family: 'Kanit', sans-serif;
+}
+
+p {
+	font-size: 16px
+}
+
+	</style>
+	
+</head>	
+
+<body>
+
+	
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #f5efed;">
+		  <a class="navbar-brand" href="/home"><img src="pic/logowan.png" width="150px"></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="/home"  style="color: #000000;font-family: 'Kanit', sans-serif">หน้าหลัก <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/about"  style="color: #000000;font-family: 'Kanit', sans-serif">about us</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="color: #000000;font-family: 'Kanit', sans-serif">product</a>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="/product1" style="background-color:#f5efed ;">wiola - detox</a>
+				  <a class="dropdown-item" href="/product2" style="background-color:#f5efed ;">wiola - collagen</a>
+			
+				</div>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" style="color: #000000;font-family: 'Kanit', sans-serif">shop media</a>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="https://www.instagram.com/wanwiola/?igshid=1xyogx2mzbwhz" style="background-color:#f5efed ;">ig</a>
+				  <a class="dropdown-item" href="https://shopee.co.th/wanwiola.official?smtt=0.0.9" style="background-color: #f5efed ;" >shopee</a>
+				</div>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link " href="/order"  style="color: #000000;font-family: 'Kanit', sans-serif">order</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link " href="/contact"  style="color: #000000;font-family: 'Kanit', sans-serif">contact us</a>
+			  </li>
+			</ul>
+			<form class="form-inline mt-2 mt-md-0">
+				<%if (isLoggedIn==false) { %>
+					<a href="/register">  <button type="button" class="w3-button w3-black w3-round-xlarge" style="background: #fdd900;color: dimgray;font-family: 'Kanit', sans-serif ; border-color: #fdd900;">สมัครสมาชิก </a> </button> &nbsp; &nbsp;
+					<a href="/login"> <button type="button" class="w3-button  w3-round-xlarge" style="background: #fdd900;color: dimgray;font-family: 'Kanit', sans-serif ; border-color: #fdd900;">เข้าสู่ระบบ</a></button>
+				  <% } %>
+				  <%if (isLoggedIn) { %>
+					<a href="/profile">  <button type="button" class="w3-button w3-black w3-round-xlarge" style="background: #fdd900;color: dimgray;font-family: 'Kanit', sans-serif ; border-color: #fdd900;"><%= username %> </a> </button> &nbsp; &nbsp;
+				  <% } %>
+			</form>
+		  </div>
+		</nav>
+	  </header>
+	  <br>
+<div class="container-fluid" style="font-family: 'Kanit', sans-serif ;">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+ <div class="carousel-inner">
+	<div class="carousel-item active" style="width: 1400px;" >
+		<img src="pic/1.jpg"    class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item " style="width: 1400px;align-items: center;" >
+        <img src="pic/4.jpg"  style="width: 200px;"     class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" style="width: 1400px;" >
+		<img src="pic/3.jpg"    class="d-block w-100" alt="...">
+		<div class="container">
+			<div class="carousel-caption text-right">
+			  <h1> welcome to <br>WANWIOLA Thailand</h1>
+			  
+				<a href="/register" ><button class="bt bt1" >  สมัครสมาชิก  </button></a>
+				<a href="/login"><button class="bt bt1" >  เข้าสู่ระบบ  </button></a>
+			</div>
+		  </div>
+	  </div>
+	  <div class="carousel-item" style="width: 1400px;" >
+        <img src="pic/4.jpg"    class="d-block w-100" alt="...">
+	  </div>
+	</div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+			
+
+		<div class="container-fluid" style="background: #fcf4f3;">
+			<br>
+
+			<center><img src="pic/a.jpg"width="300px"> <img src="pic/b.jpg"width="300px">   <img src="pic/c.jpg"width="300px">   <img src="pic/d.jpg"width="300px">
+<div class="container-fluid" style="font-family: 'Kanit', sans-serif;background: #fcf4f3;">
+	<br>
+	<p> ยินดีต้อนรับเข้าสู่เว็บไซต์ 
+		<%if (isLoggedIn==false) { %>
+			<div>Hi, you're not logged in</div>
+			<img src="pic/logowan.png" style="width: 100px;" >  ( วันวิโอล่า ) <br> ท่านสามารถเข้าสู่ระบบ หรือ สมัครสมาชิกฟรีได้ที่นี่</p>
+			<a href="/register"><button class="bt bt1">  สมัครสมาชิก </a> </button>
+			<a href="/login"> <button class="bt bt1">  เข้าสู่ระบบ  </a></button> 
+		  <% } %>
+		<%if (isLoggedIn) { %>
+			<div>Hi, you're logged in as <%= username %></div><br>
+			<img src="pic/logowan.png" style="width: 100px;" >  ( วันวิโอล่า )
+
+			<a href="/signout">logout</a>
+		  <% } %>
+
+		  
+		  
+
+ <Br>
+	<br>
+	<br>
+</div>
+
+<div class="container-fluid" style="background: #ffffff;;">
+	<br>
+
+	<div class="row">
+		<div class="col"><img src="pic/ส้ม.jpg" width="400px"></div>
+	   <div class="col"><img src="pic/overlogo.jpg" width="150px">
+		   <h1 style="font-family: 'Kanit', sans-serif ;color: #888888;"> <br>"ทำไม? ต้องดีท็อกล้างลำไส้? <br>
+		ตอบทุกคำถามแบบเคลียร์ๆ"<br></h1>
+		<h3 >Why do you need a colon <br>cleansing detox?</h3> <br><br>
+		<a href="/why"><button class="bt bt1" >  read more  </button></a></div>
+	  </div>
+
+
+
+	<hr class="featurette-divider">
+
+</div>
+
+
+<div class="container-fluid" >
+	<h1 style="font-family: 'Dancing Script', cursive;
+	text-transform:lowercase; color: #443d37;	">
+		Why have to choose <img class="rounded-circle" src="pic/overlogo.jpg" alt="Generic placeholder image" width="140" height="140"></h1><br>
+		<marquee direction="lefe" scrollamount="10" > <img src="pic/11.jpg" width="220px">     <img src="pic/22.jpg" width="220px">     <img src="pic/33.jpg" width="220px">     <img src="pic/44.jpg" width="220px"> </marquee> <br>
+<br>	<marquee direction="lefe" scrollamount="10" > <h4 style=" color: #794a4d;">&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; ingredient   &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;    &nbsp; 	quality     &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    gender  &nbsp;    &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; organic </h4></marquee><br><br>
+</div>
+
+<div class="container-fluid" style="background: #f7f7f7;">
+	<div class="row">
+		
+	   <div class="col"><h1 style="font-family: 'Kanit', sans-serif ;color: #888888;"> <br> <br>about our product<br>
+		<br></h1>
+		<h5  >wiola - d (detox)</h5> <br><h6 style="font-family: 'Kanit', sans-serif ;color: #888888;" การที่ต้องดีท็อกล้างลำไส้ก็เพื่อทำความสะอาดและขจัดสิ่งสกปรก ของเสีย <br>
+			รวมทั้งสารพิษที่ตกค้างในลำไส้ออกไป เวลาที่ของเสียต่างๆ ถูกกำจัดออกไปไม่หมด <br>
+			อาจส่งผลร้ายต่อร่างกายได้  เช่น โรคเกี่ยวกับลำไส้ ทั้งร้ายแรงและไม่ร้ายแรง <br>
+			ปัญหากลิ่นปาก กลิ่นตัว รวมไปถึงปัญหาผิวพรรณด้วย <br>
+			ฉะนั้นการดีท็อกลำไส้ จึงเป็นทางออกที่ดีและ<br>
+			มีประโยชน์ต่อสุขภาพร่างกายของเรามากๆ <br>
+			ไม่ใช่แค่แก้ปัญหาท้องผูกอย่างเดียว แต่ยังช่วยให้ระบบต่างๆ <br>
+			ไม่ว่าจะเป็น ตับ ถุงน้ำดี ไต ตับอ่อน และต่อมน้ำเหลือง  " </h6><br>
+		</div>
+		<div class="col"><img src="pic/ส้มม.jpg" width="420px"><br><br></div> 
+</div>
+</div>
+</div>
+<div class="container-fluid" style="background: #ffffff;">
+
+	 <div class="carousel-inner" >
+		<div class="carousel-item active" style="width: 1500px; height: 450;" >
+			<img src="pic/1.jpg"    class="d-block w-100" alt="...">
+		  </div>
+			<div class="container">
+				<div class="carousel-caption text-right-up">
+				  <h2 style="color: #443d37;"> detail <h2 style="font-family: kanit;
+				  text-transform:lowercase; color:  #d69f0e;"> of detox</h1><br><br><br>
+				  <a href="#" ><button class="bt bt1" style="background: #a6b265;" >  read more </button></a>
+				</div>
+			</div>
+			</div> 
+			<div class="container marketing">
+<br><br>
+				<!-- Three columns of text below the carousel -->
+				<div class="row">
+				  <div class="col-lg-4">
+					<img class="rounded-circle" src="https://i.pinimg.com/564x/17/98/6f/17986f6f9b2dd5ef5475a768b9990092.jpg" alt="Generic placeholder image" width="140" >
+					<h2 style="color: #d69f0e;">lemon</h2>
+					
+						<p style="color: #462f2f; font-family: 'Kanit', sans-serif;">				
+วิตามินซีสูงซึ่งเป็นสารต้านอนุมูลอิสระหลัก <br>ที่ช่วยปกป้อง 
+เซลล์จากการทำลายของอนุมูลอิสระ </p>
+					
+				  </div><!-- /.col-lg-4 -->
+				  <div class="col-lg-4">
+					<img class="rounded-circle" src="https://i.pinimg.com/564x/22/4e/db/224edb1a3f89e9a38e1fe45f163fec49.jpg" alt="Generic placeholder image" width="140" >
+					<h2 style="color: #d69f0e;">raspberry</h2>
+					
+						<p style="color: #462f2f;font-family: 'Kanit', sans-serif;
+						">วิตามินซีและอีซีลีเนียมเบต้าแคโรทีนลูทีนไลโคปีนและ <br>
+						ซีแซนทีนเป็นตัวอย่างของสารต้านอนุมูลอิสระ
+					</p>
+					
+				  </div><!-- /.col-lg-4 -->
+				  <div class="col-lg-4">
+					<img class="rounded-circle" src="https://i.pinimg.com/564x/7d/e3/77/7de37783d5d5ea04df3f46fd24efe763.jpg" alt="Generic placeholder image" width="140" >
+					<h2 style="color: #d69f0e;">green tea</h2>
+
+						<p style="color: #462f2f;font-family: 'Kanit', sans-serif;">ต้นชาเขียวมีสารประกอบที่ดีต่อสุขภาพหลายชนิดที่นำมาทำเป็นเครื่องดื่มขั้นสุดท้าย
+					</p>
+					
+				  </div><!-- /.col-lg-4 -->
+				</div><!-- /.row -->
+</div>
+<div class="container marketing">
+	<br><br>
+					<!-- Three columns of text below the carousel -->
+					<div class="row">
+					  <div class="col-lg-6">
+						<img class="rounded-circle" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20190628-delish-homemade-apple-cider-ehg-432-square-1562802933.png?crop=1xw:1xh;center,top&resize=480:*" alt="Generic placeholder image" width="140" >
+						<h2 style="color: #d69f0e;">apple cider</h2>
+			
+						<p style="color: #462f2f ;font-family: 'Kanit', sans-serif;">เป็นยาระบายตามธรรมชาติและสามารถปรับปรุงการย่อยอาหาร<br>
+						ลดระดับน้ำตาลในเลือด ปรับปรุงความไวของอินซูลิน<br>
+						เพิ่มความอิ่มและช่วยให้ผู้คนลดน้ำหนักลดไขมันหน้าท้อง
+						ลดคอเลสเตอรอล
+						ลดความดันโลหิตและทำให้สุขภาพหัวใจดีขึ้น </p>
+					  </div><!-- /.col-lg-4 -->
+					  <div class="col-lg-6">
+						<img class="rounded-circle" src="https://www.friedas.com/wp-content/uploads/2014/02/Friedas-Globe-Artichokes.jpg" alt="Generic placeholder image" width="140" >
+						<h2 style="color: #d69f0e;">artichock</h2>
+						
+							<p style="color: #462f2f;;font-family: 'Kanit', sans-serif;">เต็มไปด้วยสารอาหาร อาร์ติโช้คมีไขมันต่ำ<br>
+							ในขณะที่อุดมไปด้วยไฟเบอร์วิตามินแร่ธาตุและสารต้านอนุมูลอิสระ<br>
+							มีโฟเลตสูงเป็นพิเศษ<br>
+							และวิตามิน C และ K ยังให้แร่ธาตุที่สำคัญ<br>
+							เช่นแมกนีเซียมฟอสฟอรัสโพแทสเซียมและเหล็ก</p>
+						
+					  </div><!-- /.col-lg-4 -->
+					
+					</div><!-- /.row -->
+					<br>
+	</div>
+<!-- Footer -->
+
+
+
+<footer  style="background:	#fcf4f3;">
+	<br><br>
+	<div class="container text-center text-md-left mt-5">
+
+		<!-- Grid row -->
+		<div class="row mt-3">
+	
+		  <!-- Grid column -->
+		  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+	
+			<!-- Content -->
+			<h6 class="text-uppercase font-weight-bold">WANWIOLA</h6>
+			<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+			<p style="color: #d69588;"> &copy; บริษัท ผลิตภัณฑ์อาหาร เสริมแบรนด์ วันวิโอลา จำกัด</p>
+	
+		  </div>
+		 
+	
+		  <!-- Grid column -->
+		  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+	
+			<!-- Links -->
+			<h6 class="text-uppercase font-weight-bold">Products</h6>
+			<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+			<p>
+			  <a href="#!">WIOLA - Detox</a>
+			</p>
+		
+	
+		  </div>
+		
+	
+		  <!-- Grid column -->
+		  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+	
+			<!-- Links -->
+			<h6 class="text-uppercase font-weight-bold">Useful links</h6>
+			<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+			<p>
+			  <a href="/about">About us</a>
+			</p>
+			<p>
+			  <a href="#!">Shop Media</a>
+			</p>
+			<p>
+			  <a href="/review">รีวิว</a>
+			</p>
+			
+	
+		  </div>
+
+	
+		  <!-- Grid column -->
+		  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+	
+			<!-- Links -->
+			<h6 class="text-uppercase font-weight-bold">Contact</h6>
+			<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+			<p>
+			  <i class="fas fa-home mr-3"></i> bangkok, 2020, TH</p>
+			<p>
+			  <i class="fas fa-envelope mr-3"></i> wanwiola.official@gmail.com</p>
+			<p>
+			  <i class="fas fa-phone mr-3"></i> + 08 639 233 94</p>
+			<p>
+			  <i class="fas fa-print mr-3"></i> + 08 193 252 59</p>
+	
+		  </div>
+		  <!-- Grid column -->
+	
+		</div>
+		<!-- Grid row -->
+	
+	  </div>
+    <br>
+    <center>
+	 <a href="https://www.instagram.com/wanwiola/?igshid=1xyogx2mzbwhz"><img src="https://www.flaticon.com/svg/static/icons/svg/2111/2111463.svg" width="22px"> 
+	<img src="https://www.flaticon.com/svg/static/icons/svg/145/145802.svg" width="22px">
+	<img src="https://www.flaticon.com/svg/static/icons/svg/733/733579.svg" width="22px">
+	<img src="https://www.flaticon.com/svg/static/icons/svg/1384/1384060.svg" width="22px"><br><br></a>
+	<p>© 2020 · The Wanwiola Company </p>
+	<br><br><br></center>
+  </footer>
+ 
+     
+</body>
+
+										</html>
+										
+									

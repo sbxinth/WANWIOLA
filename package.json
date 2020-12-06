@@ -1,0 +1,31 @@
+{
+  "name": "wanwiola-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alert": "^5.0.6",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "fs": "0.0.1-security",
+    "md5": "^2.3.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.6",
+    "path": "^0.12.7",
+    "stripe": "^8.127.0"
+  },
+  "devDependencies": {
+    "dotenv": "^6.2.0"
+  },
+  "engines": {
+    "node": "12.19.0",
+    "npm": "6.14.8"
+  }
+}

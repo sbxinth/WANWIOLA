@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX</title>
+</head>
+<body>
+    สินค้าราคา : <span id="orderprice">50</span> บาท
+    จำนวน : <input type="number" name="a" id="orderamount" value="0">
+    รวม : <span id="ordersum">0</span><br>
+    สินค้าราคา : <span id="orderprice">100</span> บาท
+    จำนวน : <input type="number" name="a" id="orderamount" value="0">
+    รวม : <span id="ordersum">0</span><br>
+    <!-- สินค้าราคา : <span id="orderprice">150</span> บาท
+    จำนวน : <input type="number" name="a" id="orderamount" value="0">
+    รวม : <span id="ordersum">0</span><br>
+    สินค้าราคา : <span id="orderprice">200</span> บาท
+    จำนวน : <input type="number" name="a" id="orderamount" value="0">
+    รวม : <span id="ordersum">0</span><br>
+    สินค้าราคา : <span id="orderprice">250</span> บาท
+    จำนวน : <input type="number" name="a" id="orderamount" value="0">
+    รวม : <span id="ordersum">0</span><br>
+    สินค้าราคา : <span id="orderprice">300</span> บาท
+    จำนวน : <input type="number" name="a" id="orderamount" value="0">
+    รวม : <span id="ordersum">0</span><br>
+    สินค้าราคา : <span id="orderprice">350</span> บาท
+    จำนวน : <input type="number" name="a" id="orderamount" value="0">
+    รวม : <span id="ordersum">0</span><br>
+    สินค้าราคา : <span id="orderprice">400</span> บาท
+    จำนวน : <input type="number" name="a" id="orderamount" value="0">
+    รวม : <span id="ordersum">0</span><br>
+    สินค้าราคา : <span id="orderprice">450</span> บาท
+    จำนวน : <input type="number" name="a" id="orderamount" value="0">
+    รวม : <span id="ordersum">0</span><br>
+    สินค้าราคา : <span id="orderprice">500</span> บาท
+    จำนวน : <input type="number" name="a" id="orderamount" value="0">
+    รวม : <span id="ordersum">0</span><br> -->
+    รวมเป็นเงินทั้งหมด : <span id="priceall">0</span>
+    <script>
+        var orderprice = document.querySelectorAll("#orderprice")
+        var orderamount = document.querySelectorAll("#orderamount")
+        var ordersum = document.querySelectorAll("#ordersum")
+        var priceall = document.querySelector("#priceall")
+        orderamount.forEach(function(ele, index){
+            ele.addEventListener("change",function(ele){
+                ordersum[index].innerHTML = (this.value * orderprice[index].innerHTML)
+                sumalloredrsum()
+            })
+        })
+        function sumalloredrsum(){
+            var sumall = 0;
+            ordersum.forEach(function(ele,index){
+                sumall += parseInt(ordersum[index].innerHTML);
+            })
+            priceall.innerHTML = sumall;
+        }
+
+
+
+
+    </script>
+</body>
+</html>

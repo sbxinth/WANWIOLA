@@ -1,0 +1,32 @@
+{
+    "music":[
+        {
+            "id":1,
+            "name": "detox",
+            "price": 59000,
+            "imgName": "proo.jpg"
+        },
+        {
+            "id":2,
+            "name": "collagen",
+            "price": 55000,
+            "imgName": "col1.jpg"
+        }
+    ]
+    ,
+    "merch": [
+        {
+            "id": 5,
+            "name": "T-Shirt",
+            "price": 1999,
+            "imgName": "Shirt.png"
+        },
+        {
+            "id": 6,
+            "name": "Coffee",
+            "price": 1999,
+            "imgName": "Cofee.png"
+        }
+    ]
+
+}
