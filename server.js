@@ -120,6 +120,16 @@ app.get("/home", function(request, response) {
       isLoggedIn : IsLogin
     });
   });
+  app.get("/", function(request, response) {
+    // response.sendFile(path.join(__dirname + "/home.html"));
+    // console.log(request.params.abc);
+    response.send("hello world ! ");
+    // response.render("home.ejs",{
+    //   username : LogedUser,
+    //   session_id : session_id,
+    //   isLoggedIn : IsLogin
+    // });
+  });
 
   app.get("/about", function(request, response) {
     response.render("about.ejs",{
