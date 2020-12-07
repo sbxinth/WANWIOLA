@@ -25,10 +25,10 @@ const { send } = require("process");
 app.use(express.json())
 
 var connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "WANWIOLA_DB"
+    host: "us-cdbr-east-02.cleardb.com",
+    user: "b0b9390bf5e72c",
+    password: "9cf8699f",
+    database: "heroku_bdd562487c5b902"
   });
 
   
