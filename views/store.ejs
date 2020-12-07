@@ -97,17 +97,27 @@ p {
               </div>
             </nav>
           </header>
+<br><br><br><br>
+          <div class="container-fulid" style="margin: 0 0 50px 0;">
+            <br>
+          
+              <center>
+            <a href="/home">
+                <img src="pic/logowan.png" width="200px">
+               </a></center>
+<hr>
+           </div>
         <section class="container content-section">
-            <h2 class="section-header">MUSIC</h2>
+            <h2 class="section-header" style="font-family: 'Kanit', sans-serif">Products</h2>
             <div class="shop-items">
                 <% items.music.forEach(function(item){%>
 
                 <div class="shop-item" data-item-id="<%= item.id %>">
-                    <span class="shop-item-title"><%= item.name %></span>
+                    <span class="shop-item-title" style="font-family: 'Kanit', sans-serif color:#fdd900"><%= item.name %></span>
                     <img class="shop-item-image" src="Images/<%= item.imgName %>">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">$<%= item.price / 100 %></span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        <span class="shop-item-price" style="font-family: 'Kanit', sans-serif">$<%= item.price / 100 %></span>
+                        <button class="btn btn shop-item-button"  style="background-color: #fdd900;" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <%})%>
@@ -130,8 +140,13 @@ p {
 
             </div> -->
         </section>
+        <div class="container-fulid" style="margin: 10px 0 40px 0;">
+          <marquee direction="lefe" scrollamount="6" > <img src="pic/pro1.jpg" width="200px">
+            <img src="pic/pro2.jpg" width="200px"> <img src="pic/pro3.jpg"  width="200px">
+          </marquee>
+          </div>
         <section class="container content-section">
-            <h2 class="section-header">CART</h2>
+            <h2 class="section-header" style="font-family: 'Kanit', sans-serif;margin-top: 20px;">CART</h2>
             <div class="cart-row">
                 <span class="cart-item cart-header cart-column">ITEM</span>
                 <span class="cart-price cart-header cart-column">PRICE</span>
@@ -141,7 +156,9 @@ p {
               <!-- ds -->
             </div>
             <div class="cart-total">
-                <strong class="cart-total-title">Total</strong>
+              <strong class="cart-ship"style=" font-family: 'Kanit', sans-serif">ค่าจัดส่ง</strong>
+              <span class="cart-total-ship" style=" font-family: 'Kanit', sans-serif"> ฿50</span> <br>
+                <strong class="cart-total-title">ยอดรวมทั้งหมด</strong>
                 <span class="cart-total-price">$0</span>
             </div>
             <%if (isLoggedIn==false) { %>
@@ -151,7 +168,7 @@ p {
                 <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
                 <% } %>
         </section>
-        
+
 <footer  style="background:	#fcf4f3;">
 	<br><br>
 	<div class="container text-center text-md-left mt-5">

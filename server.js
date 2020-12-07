@@ -46,7 +46,7 @@ app.use(
       saveUninitialized: true
     })
   );
-  var session_id = "";
+var session_id = "";
 var IsLogin = false;
 var LogedUser = "";
 // console.log(IsLogin + "dddd");
@@ -206,6 +206,7 @@ app.get("/home", function(request, response) {
       imgurl : imurl,
       Product_name : pname
     };
+    
     // console.log(post + " this is order for input");
   
     connection.query("INSERT INTO Inventory SET ?", post, err => {
