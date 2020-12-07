@@ -1,9 +1,10 @@
-var dotenv = require("dotenv")
+var dotenv = require("dotenv");
 var mysql = require("mysql");
 var express = require("express");
 var session = require("express-session");
 var bodyParser = require("body-parser");
 var app = express();
+// var dotenv = require("dotenv");
 var path = require("path");
 let alert = require('alert');  
 var md5 = require('md5');
