@@ -116,7 +116,7 @@ p {
                     <span class="shop-item-title" style="font-family: 'Kanit', sans-serif color:#fdd900"><%= item.name %></span>
                     <img class="shop-item-image" src="Images/<%= item.imgName %>">
                     <div class="shop-item-details">
-                        <span class="shop-item-price" style="font-family: 'Kanit', sans-serif">$<%= item.price / 100 %></span>
+                        <span class="shop-item-price" style="font-family: 'Kanit', sans-serif">฿<%= item.price / 100 %></span>
                         <button class="btn btn shop-item-button"  style="background-color: #fdd900;" type="button">ADD TO CART</button>
                     </div>
                 </div>
@@ -159,7 +159,7 @@ p {
               <strong class="cart-ship"style=" font-family: 'Kanit', sans-serif">ค่าจัดส่ง</strong>
               <span class="cart-total-ship" style=" font-family: 'Kanit', sans-serif"> ฿50</span> <br>
                 <strong class="cart-total-title">ยอดรวมทั้งหมด</strong>
-                <span class="cart-total-price">$0</span>
+                <span class="cart-total-price">฿0</span>
             </div>
             <%if (isLoggedIn==false) { %>
             <button disabled class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
