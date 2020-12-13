@@ -9,7 +9,7 @@ var path = require("path");
 let alert = require('alert');  
 var md5 = require('md5');
 const fs = require("fs")
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8082
 
 if(process.env.NODE_ENV !== 'production'){
   require('dotenv').config();
