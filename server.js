@@ -1,9 +1,9 @@
 var dotenv = require("dotenv");
 var mysql = require("mysql");
 var express = require("express");
+var app = express();
 var session = require("express-session");
 var bodyParser = require("body-parser");
-var app = express();
 // var dotenv = require("dotenv");
 var path = require("path");
 let alert = require('alert');  
@@ -112,9 +112,6 @@ app.get("/register",function(req,res){
 });
 
 app.get("/home", function(request, response) {
-    // response.sendFile(path.join(__dirname + "/home.html"));
-    // console.log(request.params.abc);
-    // response.send("hello world ! ");
     response.render("home.ejs",{
       username : LogedUser,
       session_id : session_id,
